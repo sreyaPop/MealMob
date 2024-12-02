@@ -1,0 +1,161 @@
+/* General Body Styling */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Prevents body scrolling */
+}
+
+/* Scrollable Container */
+.scroll-container {
+  width: 100%;
+  max-width: 900px;
+  height: 100%;
+  overflow-y: auto; /* Enables vertical scrolling */
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers content horizontally */
+}
+
+/* Welcome Header Styling */
+.welcome-header {
+  background-color: #4CAF50;
+  color: white;
+  padding: 20px 25px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+  margin-bottom: 30px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.welcome-header:hover {
+  background-color: #45a049; /* Darker shade on hover */
+}
+
+.welcome-header h1 {
+  font-size: 2em;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Chart Container Styling */
+.chart-container {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  margin: 20px 0;
+  width: 90%;
+  max-width: 700px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: transform 0.3s ease-in-out;
+}
+
+.chart-container:hover {
+  transform: scale(1.05); /* Slightly enlarges the container on hover */
+}
+
+h2 {
+  font-size: 1.6em;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* Chart Canvas Styling */
+canvas {
+  width: 100%; /* Makes the chart fit the container's width */
+  height: auto; /* Maintains aspect ratio */
+  max-height: 400px; /* Ensures the chart is not too tall */
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .chart-container {
+    width: 95%;
+    padding: 20px;
+  }
+
+  .welcome-header h1 {
+    font-size: 1.8em;
+  }
+
+  h2 {
+    font-size: 1.4em;
+  }
+}
+
+/* Ion Toolbar Styling */
+ion-toolbar {
+  --background: #3880ff; /* Primary color */
+  --color: white;
+  padding: 12px 16px;
+}
+
+ion-toolbar ion-title {
+  font-weight: bold;
+  font-size: 1.6em;
+}
+
+ion-content {
+  display: flex;
+  justify-content: center;  /* Horizontally centers the content */
+  align-items: flex-start; /* Align content to the top */
+  height: 100%; /* Ensures full height */
+  padding: 20px;
+}
+
+/* Ion Button Styling */
+ion-button {
+  --color: #3880ff;
+  --background: transparent;
+  font-weight: bold;
+  font-size: 1em;
+  margin-left: 10px;
+  border: 2px solid #3880ff;
+  border-radius: 5px;
+  padding: 10px 15px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+ion-button:hover {
+  background-color: #3880ff;
+  color: white;
+}
+
+/* Ion Menu Styling */
+ion-menu {
+  --background: #ffffff;
+  --color: #3880ff;
+}
+
+ion-item {
+  font-size: 1.2em;
+  padding: 12px 20px;
+}
+
+ion-item ion-label {
+  font-weight: bold;
+}
+
+ion-item ion-icon {
+  margin-right: 12px;
+}

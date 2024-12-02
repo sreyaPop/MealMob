@@ -1,0 +1,48 @@
+<body>
+  <ion-menu contentId="main-content">
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-title>Menu Content</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding">
+      <ion-list>
+        <ion-item routerLink="/employee" button>
+          <ion-icon slot="start" name="person-circle-outline"></ion-icon>
+          <ion-label>Employee</ion-label>
+        </ion-item>
+        <ion-item routerLink="" button>
+          <ion-icon slot="start" name="log-out-outline"></ion-icon>
+          <ion-label>Logout</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+  <div class="ion-page" id="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <div class="scroll-container">
+        <header class="welcome-header">
+          <h1>Welcome to Mastec QuadGen Meal Hub</h1>
+        </header>
+
+        <div class="chart-container">
+          <h2>Pie Chart - Meal Distribution</h2>
+          <canvas id="pieChart"></canvas>
+        </div>
+
+        <div class="chart-container">
+          <h2>Bar Chart - Meal Count</h2>
+          <canvas id="barChart"></canvas>
+        </div>
+      </div>
+    </ion-content>
+  </div>
+</body>

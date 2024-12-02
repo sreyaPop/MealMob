@@ -1,0 +1,28 @@
+<body>
+<div class="employee-checkin">
+  <h2>Employee Check-In</h2>
+  <input
+    type="text"
+    [(ngModel)]="employeeId"
+    placeholder="Enter Employee ID"
+  /><br>
+  <button (click)="checkInEmployee()">Check In</button>
+  <p *ngIf="errorMessage" class="error">{{ errorMessage }}</p>
+</div>
+
+<ion-card *ngIf="showCard">
+  <img
+    alt="Meal Image"
+    src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2015/3/23/2/FNK_Grain-Bowls-quinoa-bowl-with-chicken-and-avocado-cream-recipe_s4x3.jpg.rend.hgtvcom.791.594.suffix/1427471321734.jpeg"
+  />
+  <ion-card-header>
+    <ion-card-title>Mastec QuadGen</ion-card-title>
+    <ion-card-subtitle>MealHub</ion-card-subtitle>
+  </ion-card-header>
+
+  <ion-card-content>
+    Employee <strong>{{ employeeName }}</strong> successfully checked in for
+    <strong>{{ mealType }}</strong> at <strong>{{ checkInTime }}</strong>.
+  </ion-card-content>
+</ion-card>
+</body>
